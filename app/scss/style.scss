@@ -23,19 +23,19 @@
     color: $title-color;
     text-decoration: none;
     padding-bottom: 3px;
-    transition: all .5s;
-    @extend %quicksand-400;
+    transition: all .1s;
+    @extend %roboto-400;
     &:hover {
       color: $accent-color;
       border-bottom: 1px solid $accent-color;
-      @extend %quicksand-500;
+      @extend %roboto-700;
     }
   }
   &__list-link--active {
     color: $accent-color;
     border-bottom: 1px solid $accent-color;
     padding-bottom: 3px;
-    @extend %quicksand-500;
+    @extend %roboto-700;
   }
 }
 
