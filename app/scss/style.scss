@@ -389,12 +389,14 @@ footer {
     grid-gap: 45px 30px;
   }
   &__link {
+    width: 170px;
+    text-align: center;
     text-transform: uppercase;
     color: $title-color;
-    display: inline-block;
     border: 1px solid $accent-color;
     padding: 14px 27px;
-    margin-top: 55px;
+    margin: 55px auto;
+    grid-column-start: 2;
   }
 }
 
