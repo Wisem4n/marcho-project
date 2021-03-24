@@ -527,6 +527,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    box-shadow: 0px 10px 40px 0px rgba(187, 187, 187, .3);
     span {
       font-size: 48px;
       @extend %roboto-700;
@@ -554,6 +555,84 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+.blog {
+  padding: 50px 0 160px;
+  background-image: url(../images/blog/blog-bg.png);
+  background-repeat: no-repeat;
+  background-position:  center center;
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    max-width: 370px;
+    border: 1px solid #ececec;
+    transition: all .3s;
+    &-imglink {
+      display: block;
+      img {
+        height: 288px;
+        object-fit: cover;
+      }
+    }
+    &:hover {
+      box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, .3);
+      border: none;
+    }
+    &-box {
+      padding: 30px 40px;
+    }
+    &-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    &-author,
+    &-date {
+      position: relative;
+      padding-left: 30px;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 0;
+        top: 4px;
+      }
+    }
+    &-author::before {
+      background-image: url(../images/blog/user-icon.svg);
+    }
+    &-date::before {
+      background-image: url(../images/blog/date-icon.svg);
+    }
+    &-title {
+      @extend %roboto-400;
+      color: $title-color;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    &-link {
+      position: relative;
+      transition: all .3s;
+      &::before {
+        position: absolute;
+        width: 10px;
+        height: 8px;
+        background-image: url(../images/blog/arrow.svg);
+        top: 7px;
+        right: -15px;
+      }
+      &:hover {
+        color: $accent-color;
+        path {
+          fill: $accent-color;
+        }
+      }
+    }
   }
 }
 
