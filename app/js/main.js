@@ -1,5 +1,15 @@
 $(function(){
 
+  $('.detail-tabs__top-item').on('click', function(e) {
+    e.preventDefault();
+    $('.detail-tabs__top-item').removeClass('detail-tabs__top-item--active');
+    $(this).addClass('detail-tabs__top-item--active');
+
+    $('.detail-tabs__content-item').removeClass('detail-tabs__content-item--active');
+    $($(this).attr('href')).addClass('detail-tabs__content-item--active');
+
+  });
+
   $('.detail-slide__thumb').slick({
     asNavFor: '.detail-slide__big',
     focusOnSelect: true,
@@ -8,6 +18,7 @@ $(function(){
     vertical: true,
     draggable: false
   });
+
   $('.detail-slide__big').slick({
     asNavFor: '.detail-slide__thumb',
     draggable: false,
