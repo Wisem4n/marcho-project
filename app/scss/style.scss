@@ -1113,7 +1113,6 @@ footer {
 
 .detail {
   padding: 120px 0 60px;
-  border-bottom: 1px solid #f0f0f0;
   &-item {
     &__inner {
       display: flex;
@@ -1399,6 +1398,10 @@ footer {
 .comments {
   margin-bottom: 40px;
   display: flex;
+  &-form {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 60px;
+  }
   &__img {
     margin-right: 30px;
     min-width: 71px;
@@ -1454,6 +1457,99 @@ footer {
     }
   }
 }
+
+.comments-form {
+  &__title {
+    color: $title-color;
+    @extend %roboto-400;
+    font-size: 22px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      background-color: $accent-color;
+      width: 50px;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  &__rating {
+    margin-bottom: 30px;
+    &-title {
+      margin-right: 60px;
+      color: $title-color;
+    }
+  }
+  &__label {
+    margin-right: 25px;
+  }
+  &__input {
+    @extend %radio-hidden;
+    &:checked + .comments-form__radio {
+      path {
+        fill: #ffc35b;
+      }
+    }
+  }
+  &__radio {
+    cursor: pointer;
+    path {
+      fill: #d8d8d8;
+    }
+  }
+  &__box-input {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__text-input {
+    width: 570px;
+    display: inline-block;
+    height: 50px;
+    padding: 0 20px;
+    border: 1px solid #f0f0f0;
+    & + .comments-form__text-input {
+      margin-left: 30px;
+    }
+  }
+  &__textarea {
+    border: 1px solid #f0f0f0;
+    padding: 15px 20px;
+    display: block;
+    width: 100%;
+    height: 225px;
+    resize: none;
+    margin-bottom: 40px;
+  }
+  &__btn {
+    border: none;
+    @extend %btn;
+  }
+}
+
+.related {
+  padding: 50px 0 120px;
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
+    .product-item__img-box {
+      height: auto;
+    }
+    .product-item__title {
+      padding: 5px 0;
+    }
+  }
+}
+
+
+
 
 
 @import 'media';

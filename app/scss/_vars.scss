@@ -30,6 +30,7 @@ $bg: #f6f6f6;
   text-transform: uppercase;
   @extend %roboto-400;
   box-shadow: 5px 5px 10px rgba(254,62,87,.3);
+  cursor: pointer;
 }
 
 %checkbox-hidden {
