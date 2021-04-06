@@ -1,5 +1,9 @@
 $(function(){
 
+  $('.menu__btn').on('click', function () {
+    $('.menu__list').toggleClass('menu__list--active') 
+  })
+
   $('.detail-tabs__top-item').on('click', function(e) {
     e.preventDefault();
     $('.detail-tabs__top-item').removeClass('detail-tabs__top-item--active');
