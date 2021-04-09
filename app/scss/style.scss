@@ -39,6 +39,7 @@
     color: #28384f;
     font-size: 48px;
     margin-bottom: 40px;
+    line-height: 52px;
   }
   &__text {
     margin-bottom: 55px;
@@ -996,6 +997,7 @@
     border-top: none;
     padding: 30px;
     margin-top: -1px;
+    text-align: justify;
     h4 {
     color: $title-color;
     font-size: 22px;
